@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "./api";
 
 function Register() {
   const [fullName, setFullName] = useState("");
@@ -12,7 +13,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:8081/api/auth/register",
+        `${API_BASE_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {

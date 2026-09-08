@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AddExpense from "./AddExpense";
 import EditExpense from "./EditExpense";
+import { API_BASE_URL } from "./api";
 
 function Dashboard() {
   const [expenses, setExpenses] = useState([]);
@@ -31,11 +32,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:8081/api/expenses?search=${encodeURIComponent(
-          search
-        )}&category=${encodeURIComponent(
-          category
-        )}&page=${page}&size=5`,
+      `${API_BASE_URL}/api/expenses?search=${encodeURIComponent(search)}&category=${encodeURIComponent(category)}&page=${page}&size=5`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -67,7 +64,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        "http://localhost:8081/api/expenses/stats",
+        `${API_BASE_URL}/api/expenses/stats`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -106,7 +103,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:8081/api/expenses/${id}`,
+        `${API_BASE_URL}/api/expenses/${id}`,
         {
           method: "DELETE",
           headers: {

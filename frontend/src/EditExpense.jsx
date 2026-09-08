@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "./api";
 
 function EditExpense({ expense, onExpenseUpdated, onCancel }) {
   const [title, setTitle] = useState(expense.title);
@@ -16,7 +17,7 @@ function EditExpense({ expense, onExpenseUpdated, onCancel }) {
 
     try {
       const response = await fetch(
-        `http://localhost:8081/api/expenses/${expense.id}`,
+        `${API_BASE_URL}/api/expenses/${expense.id}`,
         {
           method: "PUT",
           headers: {

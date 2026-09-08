@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "./api";
 
 function AddExpense({ onExpenseAdded }) {
   const [title, setTitle] = useState("");
@@ -16,7 +17,7 @@ function AddExpense({ onExpenseAdded }) {
 
     try {
       const response = await fetch(
-        "http://localhost:8081/api/expenses",
+        `${API_BASE_URL}/api/expenses`,
         {
           method: "POST",
           headers: {

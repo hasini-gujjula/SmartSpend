@@ -2,6 +2,28 @@
 
 SmartSpend is a full-stack expense tracking application that helps users manage, search, filter, and analyze their personal expenses securely.
 
+## Screenshots
+
+### Login
+
+![SmartSpend Login](screenshots/login.jpg)
+
+### Registration
+
+![SmartSpend Registration](screenshots/register.jpg)
+
+### Dashboard
+
+![SmartSpend Dashboard](screenshots/dashboard.jpg)
+
+### Expense Management
+
+![SmartSpend Expense Management](screenshots/expenses.jpg)
+
+### Edit Expense
+
+![SmartSpend Edit Expense](screenshots/editexpense.jpg)
+
 ## Features
 
 - User registration and login
